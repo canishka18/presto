@@ -14,11 +14,9 @@
 package com.facebook.presto.operator.scalar.sql;
 
 import com.facebook.presto.operator.scalar.AbstractTestFunctions;
-import com.facebook.presto.sql.analyzer.SemanticErrorCode;
 import com.google.common.collect.ImmutableList;
 import org.testng.annotations.Test;
 
-import static com.facebook.presto.common.type.VarcharType.VARCHAR;
 import com.facebook.presto.common.type.ArrayType;
 import static com.facebook.presto.common.type.CharType.createCharType;
 

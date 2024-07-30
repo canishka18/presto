@@ -41,4 +41,13 @@ public class StringSqlFunctions
     {
         return "RETURN REVERSE(SUBSTR(REVERSE(str), 1, N))";
     }
+
+    @SqlInvokedScalarFunction(value = "to_char_array", deterministic = true, calledOnNullInput = false)
+    @Description("Returns the input string as an array of chars.")
+    @SqlParameter(name = "str", type = "varchar")
+    @SqlType("array(char)")
+    public static String toCharArray()
+    {
+        return "RETURN TRIM_ARRAY(CAST(SPLIT(str, '') AS ARRAY(CHAR)), 1)";
+    }
 }
